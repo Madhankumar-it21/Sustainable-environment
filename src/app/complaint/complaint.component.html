@@ -1,0 +1,104 @@
+<div class="container">
+    <div class="form-container">
+      <div class="left-container">
+        <div class="left-inner-container">
+        <h2>Reporting Session</h2>
+        <p>Whether you have an any problem about our society, then you will be report/ fill this complaint form.</p>
+          <br>
+          <p>Do you have any queries?, then move to the contact, ask on it.</p>
+          <div class="imigo">
+            <img src="assets/com.jpg" alt="complaint image">
+        </div>
+      </div>
+   
+            
+    </div>
+      <div class="right-container" [hidden]="submitted">
+        <div class="right-inner-container">
+          <form [formGroup]="complaintForm"   (ngSubmit)="onSubmit()" #complaint="ngForm">
+              <h2 class="lg-view">Complaint Form</h2>
+        <h2 class="sm-view">Do valuable complaint only.</h2>
+
+   
+              <div class="social-container">
+                  
+              </div>
+                <div class="form-group">
+
+              <label for="name">Name<span>*</span></label>
+              <input type="text" id="name" class="form-control" placeholder="Enter your name..." formControlName="name" [(ngModel)]="complaint.name" required>
+            </div>
+                <div class="form-group">
+
+              <label for="email" class="form-label">Email address<span>*</span></label>
+              <input type="email" id="email" class="form-control" placeholder="Enter your email..." formControlName="email"  required>
+        </div>
+              <div class="form-group">
+
+              <label for="mobile" class="form-label">Phone Number<span>*</span></label>
+              <input type="tel" id="mobile" class="form-control" formControlName="mobile" placeholder="Enter your mobile number..." required>
+          </div>
+            <div class="form-check">
+
+              <label for="gender" class="form-label">Gender<span>*</span></label>
+              <input type="radio" id="male" name="gender" value="male" class="form-control" required>
+              <label for="male">Male</label>
+              <input type="radio" id="female" name="gender" value="female" class="form-control" >
+              <label for="female">Female</label>
+            </div>
+              <div class="form-group">
+
+              <label for="city" class="form-label">City<span>*</span></label>
+              <input type="text" id="city" formControlName="city" class="form-control" placeholder="Enter your city..." required>
+          </div>
+            <div class="form-group">
+
+              <label for="district" class="form-label">District<span>*</span></label>
+              <input type="text" id="district"  class="form-control" formControlName="district"  placeholder="Enter your district..." required>
+          </div>
+        <div class="form-group">
+
+              <label for="systems" class="form-label">Systems to Reported<span>*</span></label>
+              <div class="form-check">
+                <input class="form-check-input" class="form-control" type="checkbox" id="garbage" name="garbage">
+                <label class="form-check-label" for="garbage">
+                  Garbage Management System
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" class="form-control" type="checkbox" id="water" name="water" >
+                <label class="form-check-label" for="water">
+                  Water Management System
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" class="form-control" type="checkbox" id="sanitation" name="sanitation" >
+                <label class="form-check-label" for="sanitation">
+                  Sanitation Management System
+                </label>
+              </div>
+                <div class="form-check">
+                  <input class="form-check-input" class="form-control" type="checkbox" id="drainage" name="drainage" >
+                  <label class="form-check-label" for="drainage">
+                    Drainage Management System
+                  </label>
+                </div>
+                </div>
+              <div class="form-group">
+
+               <label for="photo" class="form-label">Document Proof<span>*</span></label>
+      <input type="file" class="form-control-file" class="form-control" id="photo" name="photo">
+              </div>
+            <div class="form-group">
+
+               <label for="describe" class="form-label">Descriptions<span>*</span></label>
+              <textarea rows="4" class="form-control" placeholder="Describe your report!!!" fromControlName="describe"  required></textarea>
+            </div>
+            <p>
+              <button type="submit" class="btn btn-primary btn-block"  [disabled]="!complaint.form.valid">Submit</button>
+            </p>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>  

@@ -1,0 +1,50 @@
+<body>
+
+  <div class="container mt-4">
+    <div class="card">
+      <span class="h1">Complaint Portal</span>
+      <h1 style="margin-top:30px;">Not Yet to Complaint</h1>
+      <table class="table table-striped mt-5">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>Gender</th>
+            <th>City</th>
+            <th>District</th>
+            <th>System</th>
+            <th>Proof</th>
+            <th>Description</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="complaints-table-body">
+          <tr *ngFor="let complaint of complaints">
+            <td>{{ complaint.name }}</td>
+            <td>{{ complaint.email }}</td>
+            <td>{{ complaint.mobile }}</td>
+            <td>{{ complaint.gender }}</td>
+            <td>{{ complaint.city }}</td>
+            <td>{{ complaint.district }}</td>
+            <td>
+              <ul>
+                <li *ngIf="complaint.systems.garbage">Windows</li>
+                <li *ngIf="complaint.systems.water">Mac</li>
+                <li *ngIf="complaint.systems.sanitation">Linux</li>
+                <li *ngIf="complaint.systems.drainage">Linux</li>
+              </ul>
+            </td>
+            <td><img [src]="complaint.photo" alt="Complaint photo"></td>
+            <td>{{ complaint.describe }}</td>
+            <td>
+              <button type="text" class="btn-btn-primary btn-lg mr-3" (click)="onclick()">{{ clean }}</button>>
+            </td>
+      
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+   
+</body>

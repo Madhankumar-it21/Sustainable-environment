@@ -1,0 +1,20 @@
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+       
+    <form>
+         <h3>Register</h3>
+         <label for="exampleInputEmail1" class="form-label" >Email</label>
+         <input type="email" class="form-control" name="email" [(ngModel)]="email"placeholder="Enter your Email">
+                      
+         <label for="exampleInputPassword1" class="form-label">Password</label>
+         <input type="password" class="form-control" name="password" [(ngModel)]="password"placeholder="Enter your password">
+                    
+         <button type="button" (click)="register()">Register</button>
+         <div class="reg">
+         <a href="/login">Have an account ? <span class="regis">Login</span></a>
+           </div>
+    </form>
+

@@ -1,0 +1,107 @@
+<!-- navbar-->
+<header class="header">
+    <!-- Primary Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light py-4 border-bottom border-gray bg-white">
+      <div class="container d-flex align-items-center justify-content-beween"><a class="navbar-brand" href="#">Sustainable City </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+       
+      </div>
+    </nav>
+    <!-- Secondary Navbar                -->
+    <nav class="navbar navbar-expand-lg navbar-light py-0 shadow-sm bg-white">
+      <div class="container">
+        <div class="collapse navbar-collapse py-3 py-lg-0" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active"><a routerLink="/home" class="nav-link pl-lg-0" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true}">Home <span class="sr-only">(current)</span></a></li>
+            <li class="nav-item"><a routerLink="/about" class="nav-link" routerLinkActive="active" ariaCurrentWhenActive="page">About Us</a></li>
+            <li class="nav-item"><a routerLink="/contact" class="nav-link" routerLinkActive="active" ariaCurrentWhenActive="page">Contact</a></li>
+           
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link px-4 d-inline-block" id="searchToggler" href="www.google.com"><i class="fas fa-search text-muted"></i><i class="fas fa-times text-muted d-none"></i></a></li>
+            <li class="nav-item"><a routerLink="/login" class="nav-link border-left px-4 bg-primary text-white d-inline-block" routerLinkActive="active" ariaCurrentWhenActive="page">Make an Complaint</a></li>
+            <li class="nav-item"><a routerLink="/admin" class="nav-link border-left px-4 bg-primary text-white d-inline-block" routerLinkActive="active" ariaCurrentWhenActive="page">Admin Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+<!--Main Content-->
+<router-outlet></router-outlet>
+<!-- Footer  section-->
+  <section class="contact py-5 bg-primary text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <div class="d-flex align-items-center">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div class="ml-3">       
+              <h3 class="h5 mb-0">+144-9046-4736-4657</h3>
+              <p class="small mb-0">Have a question? call us now</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <div class="d-flex align-items-center">
+            <div class="contact-icon"><i class="far fa-envelope"></i></div>
+            <div class="ml-3">       
+              <h3 class="h5 mb-0">info@gmail.com</h3>
+              <p class="small mb-0">Need support? Drop us an email</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="d-flex align-items-center">
+            <div class="contact-icon"><i class="far fa-clock"></i></div>
+            <div class="ml-3">       
+              <h3 class="h5 mb-0">24 * 7</h3>
+              <p class="small mb-0">We are Always On</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    
+    <footer class="footer">
+        <div class="container">
+          <div class="row">
+           
+            <div class="col-lg-5 mb-4 mb-lg-0">
+              <h2 class="h5 text-white lined mb-4">Quick Links</h2>
+              <div class="d-flex">
+                <ul class="list-unstyled d-inline-block mr-4 mb-0">
+                  <li class="mb-2"><a class="footer-link" routerLink="/complaint" class="nav-link" routerLinkActive="active" ariaCurrentWhenActive="page">Make Complaint </a></li>
+                  <li class="mb-2"><a class="footer-link" href="#">District Collector Office</a></li>
+                  <li class="mb-2"><a class="footer-link" href="#">Municipality Office</a></li>
+                  <li class="mb-2"><a class="footer-link" href="#">Commissioner Office</a></li>
+                </ul>
+                <ul class="list-unstyled d-inline-block mb-0">
+                  <li class="mb-2"><a class="footer-link" routerLink="/home" class="nav-link" routerLinkActive="active" ariaCurrentWhenActive="page">Home </a></li>
+                  <li class="mb-2"><a class="footer-link" routerLink="/about" class="nav-link" routerLinkActive="active" ariaCurrentWhenActive="page">About us</a></li>
+                  <li class="mb-2"><a class="footer-link" routerLink="/contact" class="nav-link" routerLinkActive="active" ariaCurrentWhenActive="page">Contact us</a></li>
+                  <li class="mb-2"><a class="footer-link" href="#">Feedback System</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <h2 class="h5 text-white lined mb-4">Feedback</h2>
+              <p class="text-muted text-small">I’ve missed? Let me know in the comments below – I’ll make sure it’s included.</p>
+         
+              <div class="input-group mb-3">
+                <input class="form-control text-muted bg-none border-primary" type="text" #feed placeholder="Any suggestions" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-primary" id="button-addon2" type="button" (click)="Send()"><i class="fas fa-paper-plane"></i></button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="copyrights">       
+          <div class="container text-center py-4">
+            <p class="mb-0 text-muted">&copy; 2023,Our College . Project designed by <a href="www.bitsathy.ac.in">Bannari Amman Institute of Technology</a>.</p>
+          </div>
+        </div>
+      </footer>

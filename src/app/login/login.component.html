@@ -1,0 +1,23 @@
+<body>
+<div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+</div>   
+   
+    <form>
+        
+              <h3>Login</h3>
+        
+               <label for="exampleInputEmail1" class="form-label">Email</label>
+               <input type="email" class="form-control" name="email" [(ngModel)]="email" placeholder="Enter Email">
+       
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" name="password" [(ngModel)]="password" placeholder="Enter Password">
+                       <button type="button" (click)="login()">Login</button>
+
+                  
+        <div class="reg">
+                <a routerLink="/register" class="nav-link" routerLinkActive="active" ariaCurrentWhenActive="page">Need Account ? <span class="regis">Register</span></a>
+            </div>  
+    </form>
+</body>

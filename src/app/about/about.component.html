@@ -1,0 +1,106 @@
+<div class="canvas"></div>
+  <div class="content">
+    <!-- Your existing HTML code here -->
+  </div>
+  <script>
+    const canvas = document.querySelector('.canvas');
+    const context = canvas.getContext('2d');
+
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
+
+    let x = 0;
+    let y = 0;
+
+    function animate() {
+      requestAnimationFrame(animate);
+
+      context.fillStyle = 'rgba(0, 0, 0, 0.1)';
+      context.fillRect(0, 0, width, height);
+
+      context.beginPath();
+      context.moveTo(x, y);
+      context.lineTo(x + 50, y + 50);
+      context.lineTo(x + 100, y - 50);
+      context.lineTo(x + 150, y + 50);
+      context.lineTo(x + 200, y - 50);
+      context.lineTo(x + 250, y + 50);
+      context.strokeStyle = '#ffffff';
+      context.stroke();
+
+      x += 1;
+      y += 1;
+
+      if (x > width) {
+        x = 0;
+      }
+
+      if (y > height) {
+        y = 0;
+      }
+    }
+
+    animate();
+  </script>
+
+<div class="about-section">
+  <h1>About Us </h1>
+  <p>Our Vission and Mission.</p>
+  <p>Let's make clean India and save our world and future generations.</p>
+  
+</div>
+
+<h2 style="text-align:center">We Provide</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="assets/a.png" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2 class="name">Vision</h2>
+        <p class="title">Indian Cooperation</p>
+        <p class="text">India's difficulty is its unclean society, particularly its water, sanitation, and
+          drainage infrastructure. Within four to five days, the appropriate worker may
+          arrive to clean that location. Until then, these wastes may spread several
+          diseases through the air and animals, as well as degrade the environment.
+          When the appropriate person doesn't show up, the society becomes
+          increasingly unclean. India generates between 0.2 and 0.6 pounds of trash per
+          person every day.</p>
+        <p><button class="button">Join Us</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="assets\b.jpg" alt="Mike" style="width:100%">
+      <div class="container">
+        <h2 class="name">Mission</h2>
+        <p class="title">PM & CM</p>
+        <p class="text">This application primarily provides details on social programmes, laws that
+          must be upheld to maintain public order, activities to be performed, and the
+          current standing of previous complaints. If the complaint is not addressed
+          within the allotted time, you can file another one, in which case the complaint
+          will be forwarded to a higher authority. After some time has passed since the
+          complaint was posted, then the content could be send to the higher officials.</p>
+        <p><button class="button">Join Us</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="assets\c.jpg" alt="John" style="width:100%; height: 295px;" >
+      <div class="container">
+        <h2 class="name">Friendly</h2>
+        <p class="title">We People</p>
+        <p class="text">The primary goal of our application is to maintain social order. So the
+          complaint session is the primary component. When we click the complaint
+          session link, a login prompt appears. After providing the necessary
+          geolocation information and user details, we must select the relevant
+          department (water, sanitation, garbage, and drainage management), after
+          which we must upload a photo or a video of that department. The appropriate could be safe.</p>
+        <p><button class="button" >Join Us</button></p>
+      </div>
+    </div>
+  </div>
+</div>
